@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PcandLaptopScreen from '../src/components/pc-laptop-maksafy';
+import TabletAndMobileScreen from '../src/components/tabletAndMobileScreen';
+import MediaQuery from 'react-responsive';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ 
+  return (<React.Fragment>
+    <MediaQuery minDeviceWidth={1048}>
+    <PcandLaptopScreen/> 
+    </MediaQuery> 
+
+    <MediaQuery maxDeviceWidth={1002}>
+      <TabletAndMobileScreen/>
+      </MediaQuery>
+      </React.Fragment>
+
   );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import '../src/reset.css';
+import '../src/assets/fonts/alfont_com_AlFont_com_SST-Arabic-Medium.ttf';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
